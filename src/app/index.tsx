@@ -1,120 +1,104 @@
-import React from "react";
-import {
+import { 
+  View, 
+  Text, 
+  StyleSheet, 
   ImageBackground,
-  Image,
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  SafeAreaView,
+  Image
 } from "react-native";
 
-export default function Entrada() {
+
+export default function Sobre() {
   return (
+
     <ImageBackground
       source={require("../../assets/saboresgeral.png")}
       style={styles.background}
       resizeMode="cover"
     >
-      <SafeAreaView style={styles.container}>
+
+      <View style={styles.container}>
+
         <Image
           source={require("../../assets/logotipo.png")}
           style={styles.logo}
           resizeMode="contain"
         />
 
-        <View style={styles.content}>
-          <Text style={styles.title}>Bem-vindo!</Text>
 
-          <Text style={styles.subtitle}>
-            Entre ou crie sua conta para descobrir sabores incríveis.
+        <Text style={styles.title}>
+          Sabores da Rota
+        </Text>
+
+
+        <View style={styles.card}>
+
+          <Text style={styles.text}>
+            O Sabores da Rota nasceu com o propósito de conectar
+            turistas e moradores aos sabores e histórias por trás
+            da gastronomia local.
+
+            {"\n\n"}
+
+            Nossa plataforma valoriza pequenos negócios,
+            restaurantes e empreendedores, tornando mais fácil
+            descobrir novos lugares e experiências.
           </Text>
+
         </View>
 
-        <View style={styles.buttons}>
-          <TouchableOpacity style={styles.primaryButton}>
-            <Text style={styles.primaryButtonText}>Entrar</Text>
-          </TouchableOpacity>
+      </View>
 
-          <TouchableOpacity style={styles.secondaryButton}>
-            <Text style={styles.secondaryButtonText}>Criar Conta</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity>
-            <Text style={styles.about}>Sobre nós</Text>
-          </TouchableOpacity>
-        </View>
-      </SafeAreaView>
     </ImageBackground>
+
   );
 }
 
+
+
 const styles = StyleSheet.create({
- background:{
- flex:1,
- backgroundColor:"#F4E1C8"
+
+background:{
+  flex:1,
 },
- container: {
-  flex: 1,
-  alignItems: "center",
-  paddingHorizontal: 24,
-  paddingVertical: 25,
+
+
+container:{
+  flex:1,
+  padding:30,
+  justifyContent:"center",
+  alignItems:"center",
 },
-  logo:{
-  width: 420,
-  height: 460,
-  marginTop: 0,
+
+
+logo:{
+  width:180,
+  height:140,
+  marginBottom:10,
 },
- content: {
-  alignItems: "center",
-  paddingHorizontal: 20,
-  marginTop: -20,
-},
- title: {
-  fontSize: 22,
-  fontWeight: "700",
+
+
+title:{
+  fontSize:28,
+  fontFamily:"Playfair Display",
+  fontWeight:"700",
+  textAlign:"center",
+  marginBottom:20,
   color:"#2D170A",
-  marginBottom: 8,
 },
-  subtitle: {
-  fontSize: 16,
-  color: "#2D170A",
-  textAlign: "center",
-  lineHeight: 24,
+
+
+card:{
+  backgroundColor:"rgba(244,225,200,0.85)",
+  padding:20,
+  borderRadius:20,
 },
-  buttons:{
- width:"100%",
- alignItems:"center",
- marginTop:40,
-},
-  primaryButton: {
-    width: "85%",
-    backgroundColor: "#2D170A",
-    paddingVertical: 15,
-    borderRadius: 30,
-    alignItems: "center",
-    marginBottom: 14,
-  },
-  primaryButtonText: {
-    color: "#F4E1C8",
-    fontSize: 16,
-    fontWeight: "600",
-  },
-  secondaryButton: {
-    width: "85%",
-    borderWidth: 1.5,
-    borderColor: "#C48138",
-    paddingVertical: 15,
-    borderRadius: 30,
-    alignItems: "center",
-    marginBottom: 16,
-  },
-  secondaryButtonText: {
-    color: "#C48138",
-    fontSize: 16,
-  },
-  about: {
-    color: "#C48138",
-    fontSize: 15,
-  },
+
+
+text:{
+  fontSize:16,
+  lineHeight:24,
+  textAlign:"justify",
+  color:"#2D170A",
+}
+
 });
