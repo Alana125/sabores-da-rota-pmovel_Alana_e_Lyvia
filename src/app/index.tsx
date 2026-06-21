@@ -1,104 +1,98 @@
-import { 
-  View, 
-  Text, 
-  StyleSheet, 
-  ImageBackground,
-  Image
-} from "react-native";
+import { View, Text, StyleSheet, Pressable } from "react-native";
+import { useRouter } from "expo-router";
 
+export default function Index() {
+  const router = useRouter();
 
-export default function Sobre() {
   return (
-
-    <ImageBackground
-      source={require("../../assets/saboresgeral.png")}
-      style={styles.background}
-      resizeMode="cover"
-    >
-
-      <View style={styles.container}>
-
-        <Image
-          source={require("../../assets/logotipo.png")}
-          style={styles.logo}
-          resizeMode="contain"
-        />
-
-
-        <Text style={styles.title}>
-          Sabores da Rota
+    <View style={styles.container}>
+      <View style={styles.content}>
+        <Text style={styles.title}>Bem-vindo(a)!</Text>
+        <Text style={styles.subtitle}>
+          Entre ou crie sua conta para explorar os melhores sabores da rota.
         </Text>
 
+        <Pressable style={styles.button} onPress={() => router.push("/login")}>
+          <Text style={styles.buttonText}>Entrar</Text>
+        </Pressable>
 
-        <View style={styles.card}>
+        <Pressable
+          style={styles.buttonSecondary}
+          onPress={() => router.push("/opcao_entrada")}
+        >
+          <Text style={styles.buttonTextSecondary}>Cadastre-se</Text>
+        </Pressable>
 
-          <Text style={styles.text}>
-            O Sabores da Rota nasceu com o propósito de conectar
-            turistas e moradores aos sabores e histórias por trás
-            da gastronomia local.
-
-            {"\n\n"}
-
-            Nossa plataforma valoriza pequenos negócios,
-            restaurantes e empreendedores, tornando mais fácil
-            descobrir novos lugares e experiências.
-          </Text>
-
-        </View>
-
+        <Pressable style={styles.link} onPress={() => router.push("/sobre")}>
+          <Text style={styles.linkText}>Saiba quem somos!</Text>
+        </Pressable>
       </View>
-
-    </ImageBackground>
-
+    </View>
   );
 }
 
-
-
 const styles = StyleSheet.create({
-
-background:{
-  flex:1,
-},
-
-
-container:{
-  flex:1,
-  padding:30,
-  justifyContent:"center",
-  alignItems:"center",
-},
-
-
-logo:{
-  width:180,
-  height:140,
-  marginBottom:10,
-},
-
-
-title:{
-  fontSize:28,
-  fontFamily:"Playfair Display",
-  fontWeight:"700",
-  textAlign:"center",
-  marginBottom:20,
-  color:"#2D170A",
-},
-
-
-card:{
-  backgroundColor:"rgba(244,225,200,0.85)",
-  padding:20,
-  borderRadius:20,
-},
-
-
-text:{
-  fontSize:16,
-  lineHeight:24,
-  textAlign:"justify",
-  color:"#2D170A",
-}
-
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 28,
+    paddingVertical: 24,
+  },
+  content: {
+    width: "100%",
+    alignItems: "center",
+    padding: 24,
+  },
+  title: {
+    fontSize: 26,
+    fontFamily: "serif",
+    fontWeight: "400",
+    color: "#2D170A",
+    marginBottom: 8,
+    textAlign: "center",
+  },
+  subtitle: {
+    fontSize: 16,
+    color: "#2D170A",
+    textAlign: "center",
+    marginBottom: 30,
+    lineHeight: 23,
+  },
+  button: {
+    width: "100%",
+    paddingVertical: 15,
+    borderRadius: 8,
+    backgroundColor: "#2D1307",
+    marginBottom: 22,
+    alignItems: "center",
+  },
+  buttonSecondary: {
+    width: "100%",
+    paddingVertical: 14,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: "#C96E22",
+    backgroundColor: "rgba(255, 248, 238, 0.66)",
+    marginBottom: 18,
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "#FFF",
+    fontSize: 16,
+    fontWeight: "700",
+  },
+  buttonTextSecondary: {
+    color: "#C96E22",
+    fontSize: 16,
+    fontWeight: "700",
+  },
+  link: {
+    paddingVertical: 4,
+  },
+  linkText: {
+    color: "#C96E22",
+    fontSize: 12,
+    fontWeight: "600",
+  },
 });
