@@ -142,7 +142,7 @@ export default function EntradaLogin() {
             </Text>
 
             <Pressable
-              onPress={() => router.push("/opcao_entrada")}
+              onPress={() => router.push("/criacao_conta")}
             >
 
               <Text style={styles.signupLink}>
@@ -164,26 +164,27 @@ export default function EntradaLogin() {
 const styles = StyleSheet.create({
 
   container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    paddingHorizontal: 20,
-  },
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "center",
+  paddingHorizontal: 20,
+  paddingBottom: 80,
+},
 
 
   card: {
     width: "100%",
     alignItems: "center",
+    paddingTop: 10,
   },
 
 
-  logo: {
-    width: 260,
-    height: 160,
-    marginBottom: 8,
-    resizeMode: "contain",
-  },
-
+logo: {
+  width: 280,
+  height: 280,
+  resizeMode: "contain",
+  marginBottom: 10,
+},
 
   title: {
     fontSize: 27,

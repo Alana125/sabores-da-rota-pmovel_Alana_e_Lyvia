@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import {
   View,
   Text,
@@ -10,14 +10,14 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 
-export default function CadastroComerciante1() {
+export default function CadastroComerciante2() {
   const router = useRouter();
 
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [telefone, setTelefone] = useState("");
-  const [senha, setSenha] = useState("");
-  const [confirmarSenha, setConfirmarSenha] = useState("");
+  const [nomeEstabelecimento, setNomeEstabelecimento] = useState("");
+  const [tipo, setTipo] = useState("");
+  const [cnpj, setCnpj] = useState("");
+  const [cep, setCep] = useState("");
+  const [endereco, setEndereco] = useState("");
 
   return (
     <View style={styles.container}>
@@ -27,82 +27,79 @@ export default function CadastroComerciante1() {
         resizeMode="contain"
       />
 
-      <Text style={styles.title}>Cadastro Comerciante</Text>
+      <Text style={styles.title}>Cadastro do Estabelecimento</Text>
 
       <Text style={styles.subtitle}>
-        Crie sua conta para continuar
+        Complete os dados da sua empresa
       </Text>
 
-      {/* Nome */}
+      {/* Nome estabelecimento */}
       <View style={styles.inputContainer}>
-        <Ionicons name="person-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="storefront-outline" size={22} color="#9A5A2A" />
         <TextInput
-          placeholder="Nome do comerciante"
+          placeholder="Nome do estabelecimento"
           placeholderTextColor="#6D4B32"
-          value={nome}
-          onChangeText={setNome}
+          value={nomeEstabelecimento}
+          onChangeText={setNomeEstabelecimento}
           style={styles.input}
         />
       </View>
 
-      {/* Email */}
+      {/* Tipo */}
       <View style={styles.inputContainer}>
-        <Ionicons name="mail-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="pricetag-outline" size={22} color="#9A5A2A" />
         <TextInput
-          placeholder="E-mail"
+          placeholder="Tipo de estabelecimento"
           placeholderTextColor="#6D4B32"
-          value={email}
-          onChangeText={setEmail}
-          keyboardType="email-address"
-          autoCapitalize="none"
+          value={tipo}
+          onChangeText={setTipo}
           style={styles.input}
         />
       </View>
 
-      {/* Telefone */}
+      {/* CNPJ */}
       <View style={styles.inputContainer}>
-        <Ionicons name="call-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="business-outline" size={22} color="#9A5A2A" />
         <TextInput
-          placeholder="Telefone para contato"
+          placeholder="CNPJ"
           placeholderTextColor="#6D4B32"
-          value={telefone}
-          onChangeText={setTelefone}
-          keyboardType="phone-pad"
+          value={cnpj}
+          onChangeText={setCnpj}
+          keyboardType="numeric"
           style={styles.input}
         />
       </View>
 
-      {/* Senha */}
+      {/* CEP */}
       <View style={styles.inputContainer}>
-        <Ionicons name="lock-closed-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="location-outline" size={22} color="#9A5A2A" />
         <TextInput
-          placeholder="Senha"
+          placeholder="CEP"
           placeholderTextColor="#6D4B32"
-          value={senha}
-          onChangeText={setSenha}
-          secureTextEntry
+          value={cep}
+          onChangeText={setCep}
+          keyboardType="numeric"
           style={styles.input}
         />
       </View>
 
-      {/* Confirmar senha */}
+      {/* Endereço */}
       <View style={styles.inputContainer}>
-        <Ionicons name="lock-closed-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="home-outline" size={22} color="#9A5A2A" />
         <TextInput
-          placeholder="Confirmar senha"
+          placeholder="Endereço completo"
           placeholderTextColor="#6D4B32"
-          value={confirmarSenha}
-          onChangeText={setConfirmarSenha}
-          secureTextEntry
+          value={endereco}
+          onChangeText={setEndereco}
           style={styles.input}
         />
       </View>
 
       <Pressable
         style={styles.button}
-        onPress={() => router.push("/cadastro_comerciante2")}
+        onPress={() => router.replace("/")}
       >
-        <Text style={styles.buttonText}>Avançar</Text>
+        <Text style={styles.buttonText}>Finalizar Cadastro</Text>
       </Pressable>
     </View>
   );

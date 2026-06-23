@@ -14,169 +14,166 @@ export default function EntrarGoogle() {
           resizeMode="contain"
         />
 
-        <Text style={styles.title}>Entrar com o Google</Text>
+        <Text style={styles.title}>
+          Entrar com o Google
+        </Text>
 
         <Text style={styles.subtitle}>
           Escolha uma conta para continuar
         </Text>
-    <Pressable style={styles.account}>
-          <Pressable
-            onPress={() => router.push("/home")}
-          ></Pressable>
-          
-      <View style={styles.avatar}>
-        <Text style={styles.avatarText}>
-          F
-        </Text>
-      </View>
 
-      <View>
-        <Text style={styles.accountName}>
-          Fulano da Silva
-        </Text>
-
-        <Text style={styles.accountEmail}>
-          usuario@gmail.com
-        </Text>
-      </View>
-
-    </Pressable>
-
-          <Pressable style={styles.account}>
-
-      <View style={styles.userAvatar}>
-        <MaterialIcons 
-          name="person-outline"
-          size={22}
-          color="#2D170A"
-        />
-      </View>
-
-      <Text style={styles.accountName}>
-        Usar outra conta
-      </Text>
-
-    </Pressable>
-            <Pressable
-              style={styles.buttonback}
-              onPress={() => router.back()}
-            >
-              <Text style={styles.buttonText}>
-                Voltar
-              </Text>
-            </Pressable>
+        <Pressable
+          style={styles.account}
+          onPress={() => router.push("/home")}
+        >
+          <View style={styles.avatar}>
+            <Text style={styles.avatarText}>F</Text>
           </View>
-        </View>
+
+          <View>
+            <Text style={styles.accountName}>
+              Fulano da Silva
+            </Text>
+
+            <Text style={styles.accountEmail}>
+              usuario@gmail.com
+            </Text>
+          </View>
+        </Pressable>
+
+        <Pressable
+          style={styles.account}
+          onPress={() => router.push("/entrada_login")}
+        >
+          <View style={styles.userAvatar}>
+            <MaterialIcons
+              name="person-outline"
+              size={22}
+              color="#2D170A"
+            />
+          </View>
+
+          <Text style={styles.accountName}>
+            Usar outra conta
+          </Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.buttonback}
+          onPress={() => router.back()}
+        >
+          <Text style={styles.buttonText}>
+            Voltar
+          </Text>
+        </Pressable>
+      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+
   container: {
     flex: 1,
+    justifyContent: "center",
     alignItems: "center",
-    justifyContent: "flex-start",
     paddingHorizontal: 20,
-    paddingTop: 80, // sobe/desce o conjunto inteiro
+    paddingBottom: 100,
   },
 
   content: {
     width: "100%",
     alignItems: "center",
-    justifyContent: "center",
+    marginTop: -30,
   },
 
   logo: {
-    width: 280,
-    height: 220,
-    marginBottom: 24,
+    width: 200,
+    height: 200,
+    marginBottom: 0,
   },
 
   title: {
     fontSize: 28,
     color: "#3D2213",
-    marginBottom: 10,
     textAlign: "center",
+    marginBottom: 10,
+    fontWeight: "600",
   },
 
   subtitle: {
     fontSize: 16,
     color: "#3D2213",
     textAlign: "center",
-    marginBottom: 26,
-    paddingHorizontal: 10,
+    marginBottom: 25,
   },
 
   account: {
     width: "100%",
+    minHeight: 70,
+    backgroundColor: "#F4E1C8",
     borderWidth: 1,
     borderColor: "#D09A54",
-    borderRadius: 8,
-    padding: 12,
-    marginBottom: 16,
+    borderRadius: 10,
+    paddingHorizontal: 15,
+    marginBottom: 15,
     flexDirection: "row",
     alignItems: "center",
   },
 
   accountName: {
     fontSize: 16,
-    marginBottom: 4,
     color: "#3D2213",
+    fontWeight: "500",
   },
 
   accountEmail: {
-    color: "#3D2213",
-  },
-
-  button: {
-    width: "100%",
-    height: 52,
-    borderRadius: 8,
-    backgroundColor: "#2D1307",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 20,
-  },
-
-  buttonText: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "600",
+    fontSize: 14,
+    color: "#6B4B32",
+    marginTop: 3,
   },
 
   avatar: {
-    width: 32,
-    height: 32,
+    width: 42,
+    height: 42,
     borderRadius: 50,
     backgroundColor: "#4B32E8",
     justifyContent: "center",
     alignItems: "center",
-    marginRight: 12,
+    marginRight: 14,
   },
 
   avatarText: {
-    color: "#fff",
-    fontSize: 15,
-    fontWeight: "600",
+    color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "700",
   },
 
   userAvatar: {
-    width: 32,
-    height: 32,
+    width: 42,
+    height: 42,
     borderRadius: 50,
     borderWidth: 1.5,
     borderColor: "#2D170A",
     justifyContent: "center",
     alignItems: "center",
-    marginRight: 12,
+    marginRight: 14,
   },
 
   buttonback: {
     width: "100%",
-    height: 48,
-    borderRadius: 8,
+    height: 50,
     backgroundColor: "#2D1307",
+    borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 10,
   },
+
+  buttonText: {
+    color: "#FFFFFF",
+    fontSize: 16,
+    fontWeight: "600",
+  },
+
 });

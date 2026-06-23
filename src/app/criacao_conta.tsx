@@ -149,7 +149,7 @@ logoContainer: {
 
   /* CARD MAIS MODERNO */
   card: {
-    backgroundColor: "#F4E1C8",
+    backgroundColor:  "#F4E1C8",
     borderRadius: 18,
     padding: 18,
     marginBottom: 22,
