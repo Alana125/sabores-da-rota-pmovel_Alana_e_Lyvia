@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import { useRouter } from "expo-router";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export default function EntrarGoogle() {
   const router = useRouter();
@@ -18,24 +19,51 @@ export default function EntrarGoogle() {
         <Text style={styles.subtitle}>
           Escolha uma conta para continuar
         </Text>
+    <Pressable style={styles.account}>
 
-        <Pressable style={styles.account}>
-          <Text style={styles.accountName}>Fulano da Silva</Text>
-          <Text style={styles.accountEmail}>usuario@gmail.com</Text>
-        </Pressable>
-
-        <Pressable style={styles.account}>
-          <Text style={styles.accountName}>Usar outra conta</Text>
-        </Pressable>
-
-        <Pressable
-          style={styles.button}
-          onPress={() => router.replace("/home")}
-        >
-          <Text style={styles.buttonText}>Continuar</Text>
-        </Pressable>
+      <View style={styles.avatar}>
+        <Text style={styles.avatarText}>
+          F
+        </Text>
       </View>
-    </View>
+
+      <View>
+        <Text style={styles.accountName}>
+          Fulano da Silva
+        </Text>
+
+        <Text style={styles.accountEmail}>
+          usuario@gmail.com
+        </Text>
+      </View>
+
+    </Pressable>
+
+          <Pressable style={styles.account}>
+
+      <View style={styles.userAvatar}>
+        <MaterialIcons 
+          name="person-outline"
+          size={22}
+          color="#2D170A"
+        />
+      </View>
+
+      <Text style={styles.accountName}>
+        Usar outra conta
+      </Text>
+
+    </Pressable>
+            <Pressable
+              style={styles.buttonback}
+              onPress={() => router.back()}
+            >
+              <Text style={styles.buttonText}>
+                Voltar
+              </Text>
+            </Pressable>
+          </View>
+        </View>
   );
 }
 
@@ -76,14 +104,16 @@ const styles = StyleSheet.create({
   },
 
   account: {
-    width: "100%",
-    borderWidth: 1,
-    borderColor: "#D09A54",
-    borderRadius: 8,
-    padding: 16,
-    marginBottom: 16,
-    backgroundColor: "rgba(255,255,255,0.2)",
-  },
+  width: "100%",
+  borderWidth: 1,
+  borderColor: "#D09A54",
+  borderRadius: 8,
+  padding: 12,
+  marginBottom: 16,
+  backgroundColor: "rgba(255,255,255,0.2)",
+  flexDirection: "row",
+  alignItems: "center",
+},
 
   accountName: {
     fontSize: 16,
@@ -111,4 +141,38 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "600",
   },
+  avatar: {
+  width: 32,
+  height: 32,
+  borderRadius: 50,
+  backgroundColor: "#4B32E8",
+  justifyContent: "center",
+  alignItems: "center",
+  marginRight: 12,
+},
+
+avatarText: {
+  color: "#fff",
+  fontSize: 15,
+  fontWeight: "600",
+},
+userAvatar: {
+  width: 32,
+  height: 32,
+  borderRadius: 50,
+  borderWidth: 1.5,
+  borderColor: "#2D170A",
+  justifyContent: "center",
+  alignItems: "center",
+  marginRight: 12,
+},
+buttonback: {
+  width: "100%",
+  height: 48,
+  borderRadius: 8,
+  backgroundColor: "#2D1307",
+  justifyContent: "center",
+  alignItems: "center",
+  marginTop: 20,
+},
 });
