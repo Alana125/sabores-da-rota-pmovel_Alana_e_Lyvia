@@ -32,7 +32,7 @@ export default function CadastroCliente() {
         <Ionicons
           name="person-outline"
           size={22}
-          color="#9A5A2A"
+          color="#2D1307"
           style={styles.icon}
         />
         <TextInput
@@ -47,7 +47,7 @@ export default function CadastroCliente() {
         <Ionicons
           name="card-outline"
           size={22}
-          color="#9A5A2A"
+          color="#2D1307"
           style={styles.icon}
         />
         <TextInput
@@ -63,7 +63,7 @@ export default function CadastroCliente() {
         <Ionicons
           name="mail-outline"
           size={22}
-          color="#9A5A2A"
+          color="#2D1307"
           style={styles.icon}
         />
         <TextInput
@@ -80,7 +80,7 @@ export default function CadastroCliente() {
         <Ionicons
           name="lock-closed-outline"
           size={22}
-          color="#9A5A2A"
+          color="#2D1307"
           style={styles.icon}
         />
         <TextInput
