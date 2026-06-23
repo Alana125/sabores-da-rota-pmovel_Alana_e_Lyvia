@@ -44,6 +44,8 @@ npm run start
 ## Telas Implementadas
 
 * Login
+* Entrada Login 
+* Criação de conta 
 * Cadastro Cliente
 * Cadastro Comerciante
 * Cadastro Comerciante (parte2)
@@ -54,4 +56,15 @@ npm run start
 
 ## Screenshots
 
-Adicione aqui os prints das telas implementadas.
+
+assets/screenshots/
+├── 001-Tela do index.jpeg
+├── 002-Entrada login.jpeg
+├── 003-Criação conta.jpeg
+├── 004-Sobre.jpeg
+├── 005-Entrar com o google.jpeg
+├── 006-Esqueceu a senha.jpeg
+├── 007 - Cadastro cliente.jpeg
+├── 008-Cadastro comerciante.jpeg
+├── 009-Cadastro comerciante 2.jpeg
+└── 010-home.jpeg
