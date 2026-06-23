@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import { useRouter } from "expo-router";
 
 export default function Index() {
@@ -7,12 +7,23 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
+        <Image
+          source={require("../assets/001-logotipo.png")}
+          style={styles.logo}
+          resizeMode="contain"
+        />
+
         <Text style={styles.title}>Bem-vindo(a)!</Text>
+
         <Text style={styles.subtitle}>
-          Entre ou crie sua conta para explorar os melhores sabores da rota.
+          Entre ou crie sua conta para explorar{"\n"}
+          os melhores sabores da rota.
         </Text>
 
-        <Pressable style={styles.button} onPress={() => router.push("/login")}>
+        <Pressable
+          style={styles.button}
+          onPress={() => router.push("/entrada_login")}
+        >
           <Text style={styles.buttonText}>Entrar</Text>
         </Pressable>
 
@@ -20,11 +31,18 @@ export default function Index() {
           style={styles.buttonSecondary}
           onPress={() => router.push("/opcao_entrada")}
         >
-          <Text style={styles.buttonTextSecondary}>Cadastre-se</Text>
+          <Text style={styles.buttonTextSecondary}>
+            Cadastre-se
+          </Text>
         </Pressable>
 
-        <Pressable style={styles.link} onPress={() => router.push("/sobre")}>
-          <Text style={styles.linkText}>Saiba quem somos!</Text>
+        <Pressable
+          style={styles.link}
+          onPress={() => router.push("/sobre")}
+        >
+          <Text style={styles.linkText}>
+            Saiba quem somos!
+          </Text>
         </Pressable>
       </View>
     </View>
@@ -34,65 +52,82 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
-    paddingHorizontal: 28,
-    paddingVertical: 24,
+    justifyContent: "center",
   },
+
   content: {
     width: "100%",
     alignItems: "center",
-    padding: 24,
+    justifyContent: "center",
+    paddingHorizontal: 20,
+    paddingVertical: 20,
   },
+
+  logo: {
+    width: 320,
+    height: 260,
+    marginBottom: -10,
+  },
+
   title: {
     fontSize: 26,
-    fontFamily: "serif",
-    fontWeight: "400",
     color: "#2D170A",
-    marginBottom: 8,
+    fontFamily: "serif",
     textAlign: "center",
+    marginBottom: 12,
   },
+
   subtitle: {
     fontSize: 16,
     color: "#2D170A",
     textAlign: "center",
-    marginBottom: 30,
-    lineHeight: 23,
+    lineHeight: 28,
+    marginBottom: 36,
+    paddingHorizontal: 12,
   },
+
   button: {
     width: "100%",
-    paddingVertical: 15,
+    height: 55,
     borderRadius: 8,
-    backgroundColor: "#2D1307",
-    marginBottom: 22,
+    backgroundColor: "#2D170A",
+    justifyContent: "center",
     alignItems: "center",
+    marginBottom: 28,
   },
+
+  buttonText: {
+    color: "#F4E1C8",
+    fontSize: 16,
+    fontWeight: "600",
+  },
+
   buttonSecondary: {
     width: "100%",
-    paddingVertical: 14,
+    height: 55,
     borderRadius: 8,
-    borderWidth: 1,
-    borderColor: "#C96E22",
-    backgroundColor: "rgba(255, 248, 238, 0.66)",
-    marginBottom: 18,
+    borderWidth: 1.5,
+    borderColor: "#C48138",
+    backgroundColor: "rgba(244,225,200,0.15)",
+    justifyContent: "center",
     alignItems: "center",
+    marginBottom: 24,
   },
-  buttonText: {
-    color: "#FFF",
-    fontSize: 16,
-    fontWeight: "700",
-  },
+
   buttonTextSecondary: {
-    color: "#C96E22",
+    color: "#C48138",
     fontSize: 16,
-    fontWeight: "700",
+    fontWeight: "600",
   },
+
   link: {
     paddingVertical: 4,
   },
+
   linkText: {
-    color: "#C96E22",
-    fontSize: 12,
+    color: "#C48138",
+    fontSize: 13,
     fontWeight: "600",
   },
 });

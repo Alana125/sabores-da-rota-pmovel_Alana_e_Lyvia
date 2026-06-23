@@ -1,30 +1,68 @@
 ﻿import { useState } from "react";
-import { View, Text, TextInput, StyleSheet, Pressable } from "react-native";
+import { View, Text, TextInput, StyleSheet, Pressable, Image } from "react-native";
 import { useRouter } from "expo-router";
 
 export default function EsqueceuSenha() {
   const router = useRouter();
+
   const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [confirmar, setConfirmar] = useState("");
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Recuperar Senha</Text>
-      <Text style={styles.subtitle}>
-        Informe o e-mail cadastrado para receber o link de recuperação.
+      <Image
+        source={require("../assets/001-logotipo.png")}
+        style={styles.logo}
+        resizeMode="contain"
+      />
+
+      <Text style={styles.title}>
+        Esqueceu a senha?
       </Text>
 
       <TextInput
+        placeholder="Email"
         value={email}
         onChangeText={setEmail}
-        placeholder="E-mail"
-        keyboardType="email-address"
-        autoCapitalize="none"
         style={styles.input}
       />
 
-      <Pressable style={styles.button} onPress={() => router.push("/login")}>
-        <Text style={styles.buttonText}>Enviar</Text>
-      </Pressable>
+      <TextInput
+        placeholder="Nova senha"
+        value={senha}
+        onChangeText={setSenha}
+        secureTextEntry
+        style={styles.input}
+      />
+
+      <TextInput
+        placeholder="Digite novamente"
+        value={confirmar}
+        onChangeText={setConfirmar}
+        secureTextEntry
+        style={styles.input}
+      />
+
+      <View style={styles.row}>
+        <Pressable
+          style={styles.voltar}
+          onPress={() => router.back()}
+        >
+          <Text style={styles.voltarText}>
+            Voltar
+          </Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.avancar}
+          onPress={() => router.replace("/entrada_login")}
+        >
+          <Text style={styles.avancarText}>
+            Avançar
+          </Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
@@ -32,41 +70,63 @@ export default function EsqueceuSenha() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 24,
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: "700",
-    color: "#2D170A",
-    marginBottom: 12,
-    textAlign: "center",
-  },
-  subtitle: {
-    fontSize: 16,
-    color: "#4A2F1D",
-    marginBottom: 24,
-    lineHeight: 22,
-    textAlign: "center",
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: "#C9B29B",
-    borderRadius: 12,
-    padding: 14,
-    marginBottom: 16,
-    backgroundColor: "#FFF",
-    fontSize: 16,
-  },
-  button: {
-    backgroundColor: "#9A5A2A",
-    paddingVertical: 16,
-    borderRadius: 12,
+    paddingTop: 40,
     alignItems: "center",
   },
-  buttonText: {
-    color: "#FFF",
-    fontSize: 16,
-    fontWeight: "700",
+
+  logo: {
+    width: 230,
+    height: 180,
+  },
+
+  title: {
+    fontSize: 28,
+    color: "#3D2213",
+    marginBottom: 20,
+  },
+
+  input: {
+    width: "100%",
+    height: 52,
+    borderWidth: 1,
+    borderColor: "#D09A54",
+    borderRadius: 8,
+    paddingHorizontal: 15,
+    marginBottom: 16,
+    backgroundColor: "rgba(255,255,255,0.2)",
+  },
+
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    marginTop: 20,
+  },
+
+  voltar: {
+    width: "40%",
+    height: 45,
+    borderWidth: 1,
+    borderColor: "#D09A54",
+    borderRadius: 8,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  avancar: {
+    width: "40%",
+    height: 45,
+    borderRadius: 8,
+    backgroundColor: "#2D1307",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  voltarText: {
+    color: "#D09A54",
+  },
+
+  avancarText: {
+    color: "#fff",
   },
 });
