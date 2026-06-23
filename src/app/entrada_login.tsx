@@ -281,6 +281,7 @@ logo: {
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 22,
+     backgroundColor: "#F4E1C8",
   },
 
 

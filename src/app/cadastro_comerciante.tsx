@@ -35,10 +35,10 @@ export default function CadastroComerciante1() {
 
       {/* Nome */}
       <View style={styles.inputContainer}>
-        <Ionicons name="person-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="person-outline" size={22} color="#2D1307" />
         <TextInput
           placeholder="Nome do comerciante"
-          placeholderTextColor="#6D4B32"
+          placeholderTextColor="#2D1307"
           value={nome}
           onChangeText={setNome}
           style={styles.input}
@@ -47,10 +47,10 @@ export default function CadastroComerciante1() {
 
       {/* Email */}
       <View style={styles.inputContainer}>
-        <Ionicons name="mail-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="mail-outline" size={22} color="#2D1307" />
         <TextInput
           placeholder="E-mail"
-          placeholderTextColor="#6D4B32"
+          placeholderTextColor="#2D1307"
           value={email}
           onChangeText={setEmail}
           keyboardType="email-address"
@@ -61,10 +61,10 @@ export default function CadastroComerciante1() {
 
       {/* Telefone */}
       <View style={styles.inputContainer}>
-        <Ionicons name="call-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="call-outline" size={22} color="#2D1307" />
         <TextInput
           placeholder="Telefone para contato"
-          placeholderTextColor="#6D4B32"
+          placeholderTextColor="#2D1307"
           value={telefone}
           onChangeText={setTelefone}
           keyboardType="phone-pad"
@@ -74,10 +74,10 @@ export default function CadastroComerciante1() {
 
       {/* Senha */}
       <View style={styles.inputContainer}>
-        <Ionicons name="lock-closed-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="lock-closed-outline" size={22} color="#2D1307" />
         <TextInput
           placeholder="Senha"
-          placeholderTextColor="#6D4B32"
+          placeholderTextColor="#2D1307"
           value={senha}
           onChangeText={setSenha}
           secureTextEntry
@@ -87,10 +87,10 @@ export default function CadastroComerciante1() {
 
       {/* Confirmar senha */}
       <View style={styles.inputContainer}>
-        <Ionicons name="lock-closed-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="lock-closed-outline" size={22} color="#2D1307" />
         <TextInput
           placeholder="Confirmar senha"
-          placeholderTextColor="#6D4B32"
+          placeholderTextColor="#2D1307"
           value={confirmarSenha}
           onChangeText={setConfirmarSenha}
           secureTextEntry

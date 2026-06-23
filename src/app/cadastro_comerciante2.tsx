@@ -35,10 +35,10 @@ export default function CadastroComerciante2() {
 
       {/* Nome estabelecimento */}
       <View style={styles.inputContainer}>
-        <Ionicons name="storefront-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="storefront-outline" size={22} color="#2D1307" />
         <TextInput
           placeholder="Nome do estabelecimento"
-          placeholderTextColor="#6D4B32"
+          placeholderTextColor="#2D1307"
           value={nomeEstabelecimento}
           onChangeText={setNomeEstabelecimento}
           style={styles.input}
@@ -47,10 +47,10 @@ export default function CadastroComerciante2() {
 
       {/* Tipo */}
       <View style={styles.inputContainer}>
-        <Ionicons name="pricetag-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="pricetag-outline" size={22} color="#2D1307"/>
         <TextInput
           placeholder="Tipo de estabelecimento"
-          placeholderTextColor="#6D4B32"
+          placeholderTextColor="#2D1307"
           value={tipo}
           onChangeText={setTipo}
           style={styles.input}
@@ -59,10 +59,10 @@ export default function CadastroComerciante2() {
 
       {/* CNPJ */}
       <View style={styles.inputContainer}>
-        <Ionicons name="business-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="business-outline" size={22} color="#2D1307" />
         <TextInput
           placeholder="CNPJ"
-          placeholderTextColor="#6D4B32"
+          placeholderTextColor="#2D1307"
           value={cnpj}
           onChangeText={setCnpj}
           keyboardType="numeric"
@@ -72,10 +72,10 @@ export default function CadastroComerciante2() {
 
       {/* CEP */}
       <View style={styles.inputContainer}>
-        <Ionicons name="location-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="location-outline" size={22} color="#2D1307" />
         <TextInput
           placeholder="CEP"
-          placeholderTextColor="#6D4B32"
+          placeholderTextColor="#2D1307"
           value={cep}
           onChangeText={setCep}
           keyboardType="numeric"
@@ -85,10 +85,10 @@ export default function CadastroComerciante2() {
 
       {/* Endereço */}
       <View style={styles.inputContainer}>
-        <Ionicons name="home-outline" size={22} color="#9A5A2A" />
+        <Ionicons name="home-outline" size={22} color="#2D1307" />
         <TextInput
           placeholder="Endereço completo"
-          placeholderTextColor="#6D4B32"
+          placeholderTextColor="#2D1307"
           value={endereco}
           onChangeText={setEndereco}
           style={styles.input}

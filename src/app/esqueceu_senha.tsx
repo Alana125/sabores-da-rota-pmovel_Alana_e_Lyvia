@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingHorizontal: 15,
     marginBottom: 16,
-    backgroundColor: "rgba(255,255,255,0.2)",
+    backgroundColor: "#F4E1C8",
     flexDirection: "row",
     alignItems: "center",
   },
@@ -140,6 +140,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     justifyContent: "center",
     alignItems: "center",
+     backgroundColor: "#F4E1C8",
   },
 
   avancar: {
