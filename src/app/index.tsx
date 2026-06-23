@@ -29,7 +29,7 @@ export default function Index() {
 
         <Pressable
           style={styles.buttonSecondary}
-          onPress={() => router.push("/opcao_entrada")}
+          onPress={() => router.push("/criacao_conta")}
         >
           <Text style={styles.buttonTextSecondary}>
             Cadastre-se
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: "#F4E1C8",
+    color: "#ffffff",
     fontSize: 16,
     fontWeight: "600",
   },

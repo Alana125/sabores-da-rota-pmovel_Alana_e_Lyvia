@@ -9,7 +9,7 @@ export default function EntrarGoogle() {
     <View style={styles.container}>
       <View style={styles.content}>
         <Image
-          source={require("../assets/001-logotipo.png")}
+          source={require("../assets/logotipo.png")}
           style={styles.logo}
           resizeMode="contain"
         />
@@ -20,7 +20,10 @@ export default function EntrarGoogle() {
           Escolha uma conta para continuar
         </Text>
     <Pressable style={styles.account}>
-
+          <Pressable
+            onPress={() => router.push("/home")}
+          ></Pressable>
+          
       <View style={styles.avatar}>
         <Text style={styles.avatarText}>
           F
@@ -71,9 +74,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     paddingHorizontal: 20,
-    paddingVertical: 30,
+    paddingTop: 80, // sobe/desce o conjunto inteiro
   },
 
   content: {
@@ -104,16 +107,15 @@ const styles = StyleSheet.create({
   },
 
   account: {
-  width: "100%",
-  borderWidth: 1,
-  borderColor: "#D09A54",
-  borderRadius: 8,
-  padding: 12,
-  marginBottom: 16,
-  backgroundColor: "rgba(255,255,255,0.2)",
-  flexDirection: "row",
-  alignItems: "center",
-},
+    width: "100%",
+    borderWidth: 1,
+    borderColor: "#D09A54",
+    borderRadius: 8,
+    padding: 12,
+    marginBottom: 16,
+    flexDirection: "row",
+    alignItems: "center",
+  },
 
   accountName: {
     fontSize: 16,
@@ -123,7 +125,6 @@ const styles = StyleSheet.create({
 
   accountEmail: {
     color: "#3D2213",
-    opacity: 0.8,
   },
 
   button: {
@@ -141,38 +142,41 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "600",
   },
-  avatar: {
-  width: 32,
-  height: 32,
-  borderRadius: 50,
-  backgroundColor: "#4B32E8",
-  justifyContent: "center",
-  alignItems: "center",
-  marginRight: 12,
-},
 
-avatarText: {
-  color: "#fff",
-  fontSize: 15,
-  fontWeight: "600",
-},
-userAvatar: {
-  width: 32,
-  height: 32,
-  borderRadius: 50,
-  borderWidth: 1.5,
-  borderColor: "#2D170A",
-  justifyContent: "center",
-  alignItems: "center",
-  marginRight: 12,
-},
-buttonback: {
-  width: "100%",
-  height: 48,
-  borderRadius: 8,
-  backgroundColor: "#2D1307",
-  justifyContent: "center",
-  alignItems: "center",
-  marginTop: 20,
-},
+  avatar: {
+    width: 32,
+    height: 32,
+    borderRadius: 50,
+    backgroundColor: "#4B32E8",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 12,
+  },
+
+  avatarText: {
+    color: "#fff",
+    fontSize: 15,
+    fontWeight: "600",
+  },
+
+  userAvatar: {
+    width: 32,
+    height: 32,
+    borderRadius: 50,
+    borderWidth: 1.5,
+    borderColor: "#2D170A",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 12,
+  },
+
+  buttonback: {
+    width: "100%",
+    height: 48,
+    borderRadius: 8,
+    backgroundColor: "#2D1307",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 20,
+  },
 });
