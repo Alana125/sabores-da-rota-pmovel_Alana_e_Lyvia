@@ -1,6 +1,14 @@
 ﻿import { useState } from "react";
-import { View, Text, TextInput, StyleSheet, Pressable, Image } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  Pressable,
+  Image,
+} from "react-native";
 import { useRouter } from "expo-router";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export default function EsqueceuSenha() {
   const router = useRouter();
@@ -12,55 +20,62 @@ export default function EsqueceuSenha() {
   return (
     <View style={styles.container}>
       <Image
-        source={require("../assets/001-logotipo.png")}
+        source={require("../assets/logotipo.png")}
         style={styles.logo}
         resizeMode="contain"
       />
 
-      <Text style={styles.title}>
-        Esqueceu a senha?
-      </Text>
+      <Text style={styles.title}>Esqueceu a senha?</Text>
 
-      <TextInput
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
-        style={styles.input}
-      />
+      <View style={styles.inputContainer}>
+        <MaterialIcons name="email" size={22} color="#2D170A"/>
+        <TextInput
+          placeholder="Email"
+          placeholderTextColor="#2D170A"
+          value={email}
+          onChangeText={setEmail}
+          keyboardType="email-address"
+          style={styles.input}
+        />
+      </View>
 
-      <TextInput
-        placeholder="Nova senha"
-        value={senha}
-        onChangeText={setSenha}
-        secureTextEntry
-        style={styles.input}
-      />
+      <View style={styles.inputContainer}>
+        <MaterialIcons name="lock" size={22} color="#2D170A" />
+        <TextInput
+          placeholder="Nova senha"
+          placeholderTextColor="#2D170A"
+          value={senha}
+          onChangeText={setSenha}
+          secureTextEntry
+          style={styles.input}
+        />
+      </View>
 
-      <TextInput
-        placeholder="Digite novamente"
-        value={confirmar}
-        onChangeText={setConfirmar}
-        secureTextEntry
-        style={styles.input}
-      />
+      <View style={styles.inputContainer}>
+        <MaterialIcons name="lock-outline" size={22} color="#2D170A" />
+        <TextInput
+          placeholder="Digite novamente"
+          placeholderTextColor="#2D170A"
+          value={confirmar}
+          onChangeText={setConfirmar}
+          secureTextEntry
+          style={styles.input}
+        />
+      </View>
 
       <View style={styles.row}>
         <Pressable
           style={styles.voltar}
           onPress={() => router.back()}
         >
-          <Text style={styles.voltarText}>
-            Voltar
-          </Text>
+          <Text style={styles.voltarText}>Voltar</Text>
         </Pressable>
 
         <Pressable
           style={styles.avancar}
           onPress={() => router.replace("/entrada_login")}
         >
-          <Text style={styles.avancarText}>
-            Avançar
-          </Text>
+          <Text style={styles.avancarText}>Avançar</Text>
         </Pressable>
       </View>
     </View>
@@ -70,22 +85,26 @@ export default function EsqueceuSenha() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 40,
+    paddingHorizontal: 20,
+    paddingTop: 30,
     alignItems: "center",
   },
 
   logo: {
-    width: 230,
-    height: 180,
+    width: 200,
+    height: 200,
+    marginBottom: 5,
   },
 
   title: {
     fontSize: 28,
     color: "#3D2213",
-    marginBottom: 20,
+    marginBottom: 25,
+    fontWeight: "600",
+    textAlign: "center",
   },
 
-  input: {
+  inputContainer: {
     width: "100%",
     height: 52,
     borderWidth: 1,
@@ -94,6 +113,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     marginBottom: 16,
     backgroundColor: "rgba(255,255,255,0.2)",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  input: {
+    flex: 1,
+    height: "100%",
+    marginLeft: 10,
+    color: "#3D2213",
+    fontSize: 15,
   },
 
   row: {
@@ -124,9 +153,11 @@ const styles = StyleSheet.create({
 
   voltarText: {
     color: "#D09A54",
+    fontWeight: "500",
   },
 
   avancarText: {
-    color: "#fff",
+    color: "#FFFFFF",
+    fontWeight: "600",
   },
-});
+}); 

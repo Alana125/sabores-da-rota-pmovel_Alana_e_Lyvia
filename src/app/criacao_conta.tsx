@@ -147,7 +147,6 @@ logoContainer: {
     marginBottom: 35,
   },
 
-  /* CARD MAIS MODERNO */
   card: {
     backgroundColor:  "#F4E1C8",
     borderRadius: 18,
@@ -156,11 +155,7 @@ logoContainer: {
 
     borderWidth: 1,
     borderColor: "rgba(216, 138, 40, 0.5)",
-
-    // SOMBRA ANDROID
     elevation: 4,
-
-    // SOMBRA iOS
     shadowColor: "#000",
     shadowOpacity: 0.08,
     shadowRadius: 10,
@@ -176,7 +171,7 @@ logoContainer: {
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: "rgba(255,255,255,0.7)",
+   backgroundColor: "#F4E1C8", 
     justifyContent: "center",
     alignItems: "center",
     marginRight: 14,
@@ -199,7 +194,6 @@ logoContainer: {
     lineHeight: 18,
   },
 
-  /* BOTÃO MAIS MODERNO */
   button: {
     alignSelf: "flex-end",
     marginTop: 15,

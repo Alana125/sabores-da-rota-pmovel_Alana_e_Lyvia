@@ -65,9 +65,9 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    width: 380,
-    height: 240,
-    marginBottom: -10,
+    width: 280,
+    height: 220,
+    marginBottom: -25,
   },
 
   title: {
@@ -75,15 +75,15 @@ const styles = StyleSheet.create({
     color: "#2D170A",
     fontFamily: "serif",
     textAlign: "center",
-    marginBottom: 12,
+    marginBottom: 10,
   },
 
   subtitle: {
     fontSize: 16,
     color: "#2D170A",
     textAlign: "center",
-    lineHeight: 28,
-    marginBottom: 36,
+    lineHeight: 24,
+    marginBottom: 30,
     paddingHorizontal: 12,
   },
 
@@ -94,11 +94,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#2D170A",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 28,
+    marginBottom: 20,
   },
 
   buttonText: {
-    color: "#ffffff",
+    color: "#FFFFFF",
     fontSize: 16,
     fontWeight: "600",
   },
@@ -109,10 +109,10 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     borderWidth: 1.5,
     borderColor: "#C48138",
-    backgroundColor: "rgba(244,225,200,0.15)",
+    backgroundColor: "#F4E1C8",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 24,
+    marginBottom: 20,
   },
 
   buttonTextSecondary: {
@@ -127,7 +127,8 @@ const styles = StyleSheet.create({
 
   linkText: {
     color: "#C48138",
-    fontSize: 13,
+    fontSize: 15,
     fontWeight: "600",
   },
 });
+

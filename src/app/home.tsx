@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Bem-vinda ao Sabores da Rota</Text>
+      <Text style={styles.title}>Bem-vindo(a) ao Sabores da Rota</Text>
       <Text style={styles.subtitle}>
         Descubra lugares, sabores e pequenos negócios da sua rota.
       </Text>
