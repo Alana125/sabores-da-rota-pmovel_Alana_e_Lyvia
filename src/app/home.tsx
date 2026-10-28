@@ -1,4 +1,9 @@
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Pressable,
+} from "react-native";
 import { useRouter } from "expo-router";
 
 export default function Home() {
@@ -27,23 +32,24 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 24,
     justifyContent: "center",
+    width: "100%",
   },
   title: {
     fontSize: 28,
     fontWeight: "700",
-    color: "#2D170A",
+    color: "#32190D",
     marginBottom: 12,
     textAlign: "center",
   },
   subtitle: {
     fontSize: 16,
-    color: "#4A2F1D",
+    color: "#563821",
     textAlign: "center",
     marginBottom: 28,
     lineHeight: 24,
   },
   button: {
-    backgroundColor: "#9A5A2A",
+    backgroundColor: "#32190D",
     paddingVertical: 16,
     borderRadius: 12,
     alignItems: "center",
@@ -58,7 +64,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   linkText: {
-    color: "#4A2F1D",
+    color: "#8C542C",
     fontSize: 15,
     textDecorationLine: "underline",
   },

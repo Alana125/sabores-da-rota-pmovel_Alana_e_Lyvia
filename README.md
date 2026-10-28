@@ -8,9 +8,7 @@
 
 ## Link do Figma
 
-Cole aqui o link do projeto no Figma:
-
-    https://www.figma.com/design/jgKetmyCSN8bNHZWidBz3B/Sabores-da-rota--c%C3%B3pia-?node-id=0-1&t=tFBKm4n6kxyOabIV-1
+https://www.figma.com/design/KugtCTublkuo95NmiTbdoz/Sabores-da-Rota?node-id=0-1
 
 ## Tecnologias Utilizadas
 
@@ -54,17 +52,10 @@ npm run start
 * Home
 * Sobre Nós
 
-## Screenshots
+## Imagens da interface
 
+Os recursos visuais exportados do Figma ficam em `img/`:
 
-assets/screenshots/
-├── 001-Tela do index.jpeg
-├── 002-Entrada login.jpeg
-├── 003-Criação conta.jpeg
-├── 004-Sobre.jpeg
-├── 005-Entrar com o google.jpeg
-├── 006-Esqueceu a senha.jpeg
-├── 007 - Cadastro cliente.jpeg
-├── 008-Cadastro comerciante.jpeg
-├── 009-Cadastro comerciante 2.jpeg
-└── 010-home.jpeg
+* `Logótipo Sabores da Rota.png`
+* `hero-bg.png`
+* `bg-landscape.png`

@@ -8,7 +8,7 @@ export default function Index() {
     <View style={styles.container}>
       <View style={styles.content}>
         <Image
-          source={require("../assets/001-logotipo.png")}
+          source={require("../../img/Logótipo Sabores da Rota.png")}
           style={styles.logo}
           resizeMode="contain"
         />
@@ -65,9 +65,9 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    width: 280,
-    height: 220,
-    marginBottom: -25,
+    width: 260,
+    height: 190,
+    marginBottom: 4,
   },
 
   title: {
@@ -131,4 +131,3 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
 });
-

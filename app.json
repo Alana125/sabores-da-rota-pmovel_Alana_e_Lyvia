@@ -24,7 +24,7 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./img/Logótipo Sabores da Rota.png"
     },
     "plugins": [
       "expo-router",

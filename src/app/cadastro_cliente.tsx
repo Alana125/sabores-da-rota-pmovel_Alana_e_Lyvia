@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Pressable,
   Image,
+  ScrollView,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
@@ -19,9 +20,13 @@ export default function CadastroCliente() {
   const [senha, setSenha] = useState("");
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      contentContainerStyle={styles.container}
+      keyboardShouldPersistTaps="handled"
+      showsVerticalScrollIndicator={false}
+    >
       <Image
-        source={require("../assets/logotipo.png")}
+        source={require("../../img/Logótipo Sabores da Rota.png")}
         style={styles.logo}
         resizeMode="contain"
       />
@@ -98,14 +103,15 @@ export default function CadastroCliente() {
       >
         <Text style={styles.buttonText}>Criar Conta</Text>
       </Pressable>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     paddingHorizontal: 24,
+    paddingVertical: 24,
     justifyContent: "center",
   },
 

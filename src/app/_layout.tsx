@@ -1,4 +1,5 @@
 import { Stack } from "expo-router";
+import { DefaultTheme, ThemeProvider } from "@react-navigation/native";
 import {
   ImageBackground,
   View,
@@ -6,35 +7,43 @@ import {
   StatusBar,
 } from "react-native";
 
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: "transparent",
+  },
+};
+
 export default function Layout() {
   return (
-    <View style={styles.container}>
+    <ImageBackground
+      source={require("../../img/bg-landscape.png")}
+      style={styles.container}
+      resizeMode="cover"
+    >
       <StatusBar
         translucent
         backgroundColor="transparent"
         barStyle="dark-content"
       />
 
-      <ImageBackground
-        source={require("../assets/saboresgeral.png")}
-        style={styles.background}
-        resizeMode="cover"
-      />
-
       <View style={styles.overlay} />
 
-      <View style={styles.stackContainer}>
-        <Stack
-          screenOptions={{
-            headerShown: false,
-            contentStyle: {
-              backgroundColor: "transparent",
-            },
-            animation: "fade",
-          }}
-        />
-      </View>
-    </View>
+      <ThemeProvider value={theme}>
+        <View style={styles.stackContainer}>
+          <Stack
+            screenOptions={{
+              headerShown: false,
+              contentStyle: {
+                backgroundColor: "transparent",
+              },
+              animation: "fade",
+            }}
+          />
+        </View>
+      </ThemeProvider>
+    </ImageBackground>
   );
 }
 
@@ -43,19 +52,17 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  background: {
-    ...StyleSheet.absoluteFillObject,
-  },
-
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(244,225,200,0.08)",
+    backgroundColor: "rgba(65, 35, 18, 0.38)",
+    pointerEvents: "none",
   },
 
   stackContainer: {
     flex: 1,
     width: "100%",
+    maxWidth: 480,
+    alignSelf: "center",
     paddingTop: StatusBar.currentHeight || 0,
-    paddingHorizontal: 20,
   },
 });

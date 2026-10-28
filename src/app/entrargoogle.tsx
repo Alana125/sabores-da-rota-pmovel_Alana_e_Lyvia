@@ -1,5 +1,12 @@
 
-import { View, Text, StyleSheet, Pressable, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Pressable,
+  Image,
+  ScrollView,
+} from "react-native";
 import { useRouter } from "expo-router";
 import { MaterialIcons } from "@expo/vector-icons";
 
@@ -7,10 +14,14 @@ export default function EntrarGoogle() {
   const router = useRouter();
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      contentContainerStyle={styles.container}
+      keyboardShouldPersistTaps="handled"
+      showsVerticalScrollIndicator={false}
+    >
       <View style={styles.content}>
         <Image
-          source={require("../assets/logotipo.png")}
+          source={require("../../img/Logótipo Sabores da Rota.png")}
           style={styles.logo}
           resizeMode="contain"
         />
@@ -68,18 +79,18 @@ export default function EntrarGoogle() {
           </Text>
         </Pressable>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
 
   container: {
-    flex: 1,
+    flexGrow: 1,
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 20,
-    paddingBottom: 100,
+    paddingVertical: 24,
   },
 
   content: {

@@ -5,7 +5,7 @@ export default function Sobre() {
     <ScrollView contentContainerStyle={styles.container}>
 
       <Image
-        source={require("../assets/logotipo.png")}
+        source={require("../../img/Logótipo Sabores da Rota.png")}
         style={styles.logo}
         resizeMode="contain"
       />

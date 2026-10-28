@@ -21,7 +21,7 @@ export default function OpcaoEntrada() {
       {/* LOGO */}
       <View style={styles.logoContainer}>
         <Image
-          source={require("../assets/logotipo.png")}
+          source={require("../../img/Logótipo Sabores da Rota.png")}
           style={styles.logo}
           resizeMode="contain"
         />
